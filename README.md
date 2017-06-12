@@ -5,7 +5,7 @@ Automatic deriving of `From` and `Deref` for Rust newtype structs.
 ## Documentation
 
 Using `#[derive(NewtypeProxy)]` on a single argument tuple struct will
-create `From` and `Deref` which wrap and unwrap the argument value.
+create `From` and `Deref` implementations which wrap and unwrap the argument value.
 Thanks to `Deref`, you'll be able to invoke methods on the newtype as
 if it were the wrapped type.
 
