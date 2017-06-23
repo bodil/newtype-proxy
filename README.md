@@ -19,8 +19,8 @@ struct MyNewType(Vec<i32>);
 fn test() {
     // Wrap the inner type using From::from
     let my_new_type = MyNewType::from(vec![1, 2, 3]);
-    // Call the length() method on the wrapped Vec using Deref
-    let my_new_types_length = my_new_type.length();
+    // Call the len() method on the wrapped Vec using Deref
+    let my_new_types_length = my_new_type.len();
 }
 ```
 
