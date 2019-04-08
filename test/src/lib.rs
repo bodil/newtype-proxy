@@ -10,8 +10,10 @@ mod tests {
     #[test]
     fn it_works() {
         let some_vec: Vec<i64> = vec![1, 2, 3];
-        let my_vec = MyVec::from(some_vec.clone());
+        let mut my_vec = MyVec::from(some_vec.clone());
         assert_eq!(3, my_vec.len());
         assert_eq!(some_vec, *my_vec);
+        my_vec.push(4);
+        assert_eq!(4, my_vec.len());
     }
 }

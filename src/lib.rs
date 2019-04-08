@@ -40,6 +40,12 @@ fn impl_newtype_proxy(ast: &MacroInput) -> quote::Tokens {
                             &self.0
                         }
                     }
+                    
+                    impl#impl_vars ::std::ops::DerefMut for #name#type_vars #where_clause {
+                        fn deref_mut(&mut self) -> &mut #inner_type {
+                            &mut self.0
+                        }
+                    }
                 }
             } else {
                 panic!("derive(NewtypeProxy) only supports single value newtypes.")
