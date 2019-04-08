@@ -1,3 +1,7 @@
+## Do Not Use
+
+This crate remains unpublished for a reason. If you need this functionality, please use [`derive_more`](https://crates.io/crates/derive_more).
+
 # newtype-proxy
 
 Automatic deriving of `From` and `Deref` for Rust newtype structs.
